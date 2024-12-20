@@ -1,17 +1,19 @@
 package main
 
-import (
-	"fmt"
+import "github.com/michaelgalloacn/Golang-Examples/errorhandling"
 
-	errorhandling "github.com/michaelgalloacn/Golang-Examples/errorhandling"
+const (
+	testErrors = false
+	testPanics = true
 )
 
 func main() {
-	str, err := errorhandling.StringWithError(true)
-	if err != nil {
-		fmt.Println(err.Error())
-		return
+	if testErrors {
+		errorhandling.TestErrorHandling()
 	}
-	fmt.Println(str)
+
+	if testPanics {
+		errorhandling.TestPanic()
+	}
 
 }
