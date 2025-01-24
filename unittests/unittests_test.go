@@ -17,6 +17,16 @@ func TestIsPositive(t *testing.T) {
 			intVal:   0,
 			expected: "i is 0",
 		},
+		{
+			name:     "int is less than 0",
+			intVal:   -1,
+			expected: "is less than 0",
+		},
+		{
+			name:     "int is greater than 0",
+			intVal:   1,
+			expected: "i is greater than 0",
+		},
 	}
 
 	for _, testCase := range testCases {
