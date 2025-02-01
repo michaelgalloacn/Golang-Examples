@@ -3,12 +3,14 @@ package main
 import (
 	"github.com/michaelgalloacn/Golang-Examples/errorhandling"
 	"github.com/michaelgalloacn/Golang-Examples/exported"
+	Server "github.com/michaelgalloacn/Golang-Examples/server"
 )
 
 const (
 	testErrors   = false
-	testPanics   = true
-	testExported = true
+	testPanics   = false
+	testExported = false
+	runServer    = false
 )
 
 func main() {
@@ -29,4 +31,7 @@ func main() {
 		errorhandling.TestPanic()
 	}
 
+	if runServer {
+		Server.RunServer()
+	}
 }
